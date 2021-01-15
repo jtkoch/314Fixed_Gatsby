@@ -11,13 +11,13 @@ const Header = () => (
   <Container className="pl-auto nav-container" fluid={true}>
     <Navbar expand="lg">
         <Link to="/" ><img className="icon" src={icon} alt="logo" /></Link>
-        <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
+        <Navbar.Toggle className="border-0 navbar-dark" aria-controls="navbar-toggle" />
         <Navbar.Collapse id="navbar-collapse">
             <Nav className="ml-auto" className="navbar-container">
-                <Link style={{color:"#ADBFEF"}} className="nav-link m-4" to="/">Home</Link>
-                <Link style={{color:"#ADBFEF"}} className="nav-link m-4" to="/Blog">Blog</Link>
-                <Link style={{color:"#ADBFEF"}} className="nav-link m-4" to="/merch">Merch</Link>
-                <Link style={{color:"#ADBFEF"}} className="nav-link m-4" to="/Contact">Contact</Link>
+                <Link style={{color:"#ADBFEF"}} className="nav-link ml-4 mr-4" to="/">Home</Link>
+                <Link style={{color:"#ADBFEF"}} className="nav-link ml-4 mr-4" to="/Blog">Blog</Link>
+                <Link style={{color:"#ADBFEF"}} className="nav-link ml-4 mr-4" to="/merch">Merch</Link>
+                <Link style={{color:"#ADBFEF"}} className="nav-link ml-4 mr-4" to="/Contact">Contact</Link>
             </Nav>
         </Navbar.Collapse>
     </Navbar>

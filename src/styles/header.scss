@@ -1,19 +1,19 @@
 // Navigation
 .nav-container {
-    border-bottom: 1px solid black;
+    border-bottom: .5px solid #adbfef;
     background: linear-gradient(
-      to right, 
-      #adbfef,
-      #f55555 
-    ) no-repeat; 
-
+        to right,
+        #000000,
+        #111111,
+        #f55555
+      ) repeat; 
+      
     .navbar-container {
         margin-left: auto;
     }
 
     .nav-link {
         font-size: 1.3rem;
-        font-weight: 700;
     }
     .nav-link:hover {
         text-shadow: 2px 3px #f55555;

@@ -1,9 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
 @import "./home.scss";
 @import "./header.scss";
 
-$font: 'Roboto', sans-serif; 
+$font: 'Raleway', sans-serif; 
 
 //Colors
 
@@ -13,31 +14,12 @@ html, body {
     font-family: $font;
     font-size: 16px;
     text-align: center;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        #000000,
+        #111111,
+        #222222,
+        #292929
+      ) repeat; 
 }
-
-// .container {
-//     width: 1640px;
-//     min-width: 1640px;
-//     margin: 0 auto;
-
-//     @media(max-width: 1440px) {
-//         width: 1280px;
-//         min-width: 1280px;
-//     }
-//     @media(max-width: 1280px) {
-//         width: 976px;
-//         min-width: 976px
-//     }
-//     @media(max-width: 976px) {
-//         width: 768px;
-//         min-width: 768px;
-//     }
-//     @media(max-width: 768px) {
-//       width: 568px;
-//       min-width: 568px;
-//     }
-//     @media(max-width: 568px) {
-//       width: 370px;
-//       min-width: 370px;
-//     }
-// }

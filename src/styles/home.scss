@@ -1,6 +1,137 @@
-.container {
+.home-container {
     display: flex;
-    flex-direction: column;
     text-align: center;
     width: 100vw;
+    
+    .bikes {
+        width: 50%;
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    .right-side {
+        text-align: left;
+        padding: 5%;
+        margin-top: 13%;
+        @media (max-width: 991px) {
+            margin-top: 25%;
+            text-align: center;
+        }
+
+        h1 {
+            width: 100%;
+            background-image: linear-gradient(to right,#f55555, #adbfef );
+            color: transparent;
+            background-clip: text;
+            font-size: 5.25rem;
+            @media (max-width: 991px) {
+                color: #f55555;
+                background: linear-gradient(
+                    to right,
+                    #000000,
+                    #111111,
+                    #222222,
+                    #292929
+                  ) repeat; 
+                font-size: 4rem;
+            }
+        }
+
+        h3 {
+            color: #adbfef;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            font-size: 2rem;
+            @media (max-width: 991px) {
+                text-shadow: 2px 2px black;
+                font-size: 1.75rem;
+            }
+        }
+
+        p {
+            color: whitesmoke;
+            font-size: 1.25rem;
+            padding-bottom: 3%;
+            @media (max-width: 991px) {
+                text-shadow: 2px 2px black;
+                font-size: 1.15rem;
+            }
+        }
+
+        .button {
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: whitesmoke;
+            background: #111111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+
+            @media (max-width: 991px) {
+                margin-bottom: 300px;
+            }
+        }
+        
+        .button:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #f76565, #f55555, #adbfef, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        
+        .button:active {
+            color: #111111
+        }
+        
+        .button:active:after {
+            background: transparent;
+        }
+        
+        .button:hover:before {
+            opacity: 1;
+        }
+        
+        .button:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+
+        
+    }
+
+    @media (max-width: 991px) {
+        background-image: url("../images/314pic2.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    
 }
