@@ -1,4 +1,7 @@
+@import "~bootstrap/scss/bootstrap";
+
 @import "./home.scss";
+@import "./header.scss";
 
 $font: 'Roboto', sans-serif; 
 
@@ -12,30 +15,29 @@ html, body {
     text-align: center;
 }
 
-.container {
-    width: 1640px;
-    min-width: 1640px;
-    margin: 0 auto;
+// .container {
+//     width: 1640px;
+//     min-width: 1640px;
+//     margin: 0 auto;
 
-
-    @media(max-width: 1440px) {
-        width: 1280px;
-        min-width: 1280px;
-    }
-    @media(max-width: 1280px) {
-        width: 976px;
-        min-width: 976px
-    }
-    @media(max-width: 976px) {
-        width: 768px;
-        min-width: 768px;
-    }
-    @media(max-width: 768px) {
-      width: 568px;
-      min-width: 568px;
-    }
-    @media(max-width: 568px) {
-      width: 370px;
-      min-width: 370px;
-    }
-}
+//     @media(max-width: 1440px) {
+//         width: 1280px;
+//         min-width: 1280px;
+//     }
+//     @media(max-width: 1280px) {
+//         width: 976px;
+//         min-width: 976px
+//     }
+//     @media(max-width: 976px) {
+//         width: 768px;
+//         min-width: 768px;
+//     }
+//     @media(max-width: 768px) {
+//       width: 568px;
+//       min-width: 568px;
+//     }
+//     @media(max-width: 568px) {
+//       width: 370px;
+//       min-width: 370px;
+//     }
+// }

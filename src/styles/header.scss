@@ -1,0 +1,30 @@
+// Navigation
+.nav-container {
+    border-bottom: 1px solid black;
+    background: linear-gradient(
+      to right, 
+      #adbfef,
+      #f55555 
+    ) no-repeat; 
+
+    .navbar-container {
+        margin-left: auto;
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    .nav-link:hover {
+        text-shadow: 2px 3px #f55555;
+    }
+
+    .icon {
+        width: 85px; 
+        margin-left: -1.5%;
+
+        @media(max-width: 500px) {
+            margin-left: -7%;
+        }
+    }
+}
