@@ -1,22 +1,38 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import bikes from "../images/314pic2.jpg"
+
+import logo from '../images/314logo.png'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className="home-container">
-      <img className="bikes" src={bikes} alt=""/>
-      <div className="right-side">
-        <h1>314 FIXED</h1>
-        <h3>A Saint Louis Track Bike Collective</h3>
+      <div className="hero-section">
+        <img className="logo" src={logo} alt="" />
         <p>
           We put together group rides in Saint Louis for anyone that
           loves to ride fixed gear bikes. Come hang!
         </p>
-        <button className="button">Contact Us!</button>
+        <a href="#" class="button">Contact Us</a>
       </div>
+
+      <div className="mid">
+        <h1>About Us</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+      <div className="contact">
+
+      </div>
+
     </div>
   </Layout>
 )
