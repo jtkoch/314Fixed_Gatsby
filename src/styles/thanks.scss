@@ -1,0 +1,21 @@
+.thanks-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25%;
+    @media (max-width: 700px) {
+        padding-top: 50%;
+    }
+
+    h1 {
+        color: whitesmoke;
+        font-size: 4rem;
+        padding: 2%;
+        @media (max-width: 991px) {
+            font-size: 3rem;
+        }
+    }
+    p {
+        color: whitesmoke;
+        font-size: 1.25rem;
+    }
+}

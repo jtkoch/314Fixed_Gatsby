@@ -37,7 +37,15 @@ const Contact = () => {
 
     return (
             <div className="form-container">
-                <form onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                <h1>Reach out!</h1>
+
+                <form 
+                    onSubmit={handleSubmit} 
+                    name="contact" method="post" 
+                    data-netlify="true" 
+                    data-netlify-honeypot="bot-field"
+                    action="/thanks/"    
+                >
                     <input type="hidden" name="form-name" value="contact" />
 
                     <div className="form-section">
@@ -46,8 +54,7 @@ const Contact = () => {
                             id="name" 
                             type="text" 
                             name="name"
-                            action="/thanks/"
-                            required="true"
+                            required={true}
                             onChange={handleChange} 
                             value={formState.name} 
                             placeholder="Enter your name" 
@@ -58,7 +65,7 @@ const Contact = () => {
                             id="email" 
                             type="email" 
                             name="email"
-                            required="true"
+                            required={true}
                             onChange={handleChange} 
                             value={formState.email} 
                             placeholder="Enter your email" 
@@ -69,7 +76,7 @@ const Contact = () => {
                             id="message" 
                             type="text" 
                             name="message"
-                            required="true"
+                            required={true}
                             onChange={handleChange} 
                             value={formState.message} 
                             placeholder="Enter your message" 

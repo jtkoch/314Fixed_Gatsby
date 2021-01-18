@@ -17,7 +17,7 @@ const Header = () => (
                 <Link style={{color:"#ADBFEF"}} className="nav-link ml-4 mr-4" to="/">Home</Link>
                 <Link style={{color:"#ADBFEF"}} className="nav-link ml-4 mr-4" to="/Blog">Blog</Link>
                 <Link style={{color:"#ADBFEF"}} className="nav-link ml-4 mr-4" to="/merch">Merch</Link>
-                <Link style={{color:"#ADBFEF"}} className="nav-link ml-4 mr-4" to="/Contact">Contact</Link>
+                <Link style={{color:"#ADBFEF"}} className="nav-link ml-4 mr-4" to="#contact">Contact</Link>
             </Nav>
         </Navbar.Collapse>
     </Navbar>

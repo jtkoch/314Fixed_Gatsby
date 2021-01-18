@@ -15,7 +15,7 @@ const IndexPage = () => (
           We put together group rides in Saint Louis for anyone that
           loves to ride fixed gear bikes. Come hang!
         </p>
-        <a href="#" className="button">Contact Us</a>
+        <a href="#contact" className="button">Contact Us</a>
       </div>
 
       <div className="mid">
@@ -30,7 +30,7 @@ const IndexPage = () => (
         </p>
       </div>
 
-      <div className="contact">
+      <div className="contact" id="contact">
         <Contact />
       </div>
 
