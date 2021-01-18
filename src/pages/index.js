@@ -1,9 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-import logo from '../images/314logo.png'
 import Contact from '../components/contact'
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons"
+import logo from '../images/314logo.png'
+
 
 const IndexPage = () => (
   <Layout>
@@ -30,8 +33,19 @@ const IndexPage = () => (
         </p>
       </div>
 
-      <div className="contact" id="contact">
-        <Contact />
+      <div className="bottom">
+        <div className="contact">
+          <Contact />
+        </div>
+        <div className="social">
+          <h3>Links</h3>
+          <p>
+            Check our instagram story for updates <br></br>
+            on upcoming group rides
+          </p>
+          <a href="https://www.instagram.com/314fixed/" target=" _blank" rel="noopener noreferrer" ><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a>
+          <a href="https://www.youtube.com/channel/UCy6wfAZwP54rcZ6ToFprHGA" target=" _blank" rel="noopener noreferrer" ><FontAwesomeIcon icon={faYoutube}></FontAwesomeIcon></a>
+        </div>
       </div>
 
     </div>

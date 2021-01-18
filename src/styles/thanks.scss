@@ -2,8 +2,22 @@
     display: flex;
     flex-direction: column;
     padding-top: 25%;
-    @media (max-width: 700px) {
+    padding-bottom: 20%;
+    @media (max-width: 1650px) {
+        padding-top: 30%;
+        padding-bottom: 30%;
+    }
+    @media (max-width: 1300px) {
         padding-top: 50%;
+        padding-bottom: 50%;
+    }
+    @media (max-width: 830px) {
+        padding-top: 80%;
+        padding-bottom: 100%;
+    }
+    @media (max-width: 450px) {
+        padding-top: 120%;
+        padding-bottom: 130%;
     }
 
     h1 {
