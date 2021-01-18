@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import logo from '../images/314logo.png'
+import Contact from '../components/contact'
 
 const IndexPage = () => (
   <Layout>
@@ -14,7 +15,7 @@ const IndexPage = () => (
           We put together group rides in Saint Louis for anyone that
           loves to ride fixed gear bikes. Come hang!
         </p>
-        <a href="#" class="button">Contact Us</a>
+        <a href="#" className="button">Contact Us</a>
       </div>
 
       <div className="mid">
@@ -30,7 +31,7 @@ const IndexPage = () => (
       </div>
 
       <div className="contact">
-
+        <Contact />
       </div>
 
     </div>

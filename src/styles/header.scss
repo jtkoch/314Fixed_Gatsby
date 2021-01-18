@@ -2,6 +2,8 @@
 .nav-container {
     border-bottom: 1.5px solid #f55555;
     background: #111111;
+    position: fixed;
+    z-index: 2;
       
     .navbar-container {
         margin-left: auto;
