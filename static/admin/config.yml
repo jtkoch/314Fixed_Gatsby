@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: jtkoch/314Fixed_Gatsby
+  branch: main
 media_folder: static/assets
 public_foler: assets
 collections:
