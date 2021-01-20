@@ -117,23 +117,29 @@
 
     .bottom {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
         width: 100%;
 
-        @media (max-width: 991px) {
-            flex-direction: column;
-        }
-
         .contact {
+            text-align: center;
             width: 60%;
             @media (max-width: 991px) {
-                width: 95%;
+                width: 65%;
+            }
+            @media (max-width: 700px) {
+                width: 70%;
+            }
+            @media (max-width: 400px) {
+                width: 80%;
             }
         }
 
         .social {
             text-align: center;
-            width: 40%;
+            padding: 5%;
             @media (max-width: 991px) {
                 width: 100%;
                 padding-top: 10%;
@@ -141,6 +147,7 @@
 
             h3 {
                 font-size: 5rem;
+                text-align: center;
                 background-image: linear-gradient(to right,#f55555, #adbfef, #c35fde);
                 color: transparent;
                 background-clip: text;
@@ -151,11 +158,11 @@
 
             p {
                 color: whitesmoke;
-                padding: 5%;
             }
 
             a {
                 margin: 5%;
+                padding-bottom: 5%;
                 color: #f55555;
                 font-size: 200%;
             }
