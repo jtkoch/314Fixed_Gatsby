@@ -9,12 +9,14 @@ export default class BlogIndexPage extends React.Component {
       <React.Fragment>
         <Layout>
             <SEO title="Blog" />
-            <h1 className="blog-title">Latest Posts</h1>
-            <section>
-            <div className="content">
-                <BlogRoll />
+            <div className="blog-page-container">
+                <h1 className="blog-title">Latest Posts</h1>
+                <section>
+                    <div className="content">
+                        <BlogRoll />
+                    </div>
+                </section>
             </div>
-            </section>
         </Layout>
       </React.Fragment>
     )

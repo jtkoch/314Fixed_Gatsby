@@ -1,17 +1,119 @@
-.blog-title {
-    padding: 10%;
-    font-size: 5rem;
-    text-align: center;
-    background-image: linear-gradient(to right,#f55555, #adbfef, #c35fde);
-    color: transparent;
-    background-clip: text;
+// Blog latest Posts page
+.blog-page-container {
+    width: 100%;
+    margin-bottom: 10%;
+
+    @media (max-width: 1300px) {
+        margin-bottom: 20%;
+    }
+    @media (max-width: 1200px) {
+        margin-bottom: 50%;
+    }
+    @media (max-width: 991px) {
+        margin-bottom: 100%;
+        padding-top: 5%;
+    }
     @media (max-width: 700px) {
-        font-size: 4rem;
+        margin-bottom: 125%;
+        padding-top: 15%;
+    }
+    @media (max-width: 500px) {
+        padding-top: 25%;
+        margin-bottom: 140%;
+    }
+    @media (max-width: 400px) {
+        margin-bottom: 160%;
+    }
+
+    .blog-title {
+        padding-top: 10%;
+        font-size: 5rem;
+        text-align: center;
+        background-image: linear-gradient(to right,#f55555, #adbfef, #c35fde);
+        color: transparent;
+        background-clip: text;
+        @media (max-width: 700px) {
+            font-size: 2.5rem;
+        }
+        @media (max-width: 400px) {
+            font-size: 2rem;
+        }
+    }
+
+    .content {
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 1rem;
+        color: whitesmoke;
+        padding-bottom: 30%;
+        @media (max-width: 700px) {
+            font-size: .9rem;
+        }
     }
 }
 
-.content {
-    font-size: 1.25rem;
-    color: whitesmoke;
-    padding-bottom: 10%;
+// Blog templates page
+.blog-post-container {
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30%;
+    @media (max-width: 1300px) {
+        margin-bottom: 40%;
+    }
+    @media (max-width: 1200px) {
+        margin-bottom: 70%;
+    }
+    @media (max-width: 991px) {
+        margin-bottom: 100%
+    }
+    @media (max-width: 700px) {
+        margin-bottom: 125%;
+    }
+
+    .blog-post {
+        width: 75%;
+        @media (max-width: 1250px) {
+            padding-top: 5%;
+        }
+        @media (max-width: 991px) {
+            padding-top: 10%;
+        }
+        @media (max-width: 700px) {
+            padding-top: 30%;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            background-image: linear-gradient(to right,#f55555, #adbfef, #c35fde);
+            color: transparent;
+            background-clip: text;
+            @media (max-width: 700px) {
+                font-size: 2rem;
+            }
+        }
+        h2 {
+            font-size: 1.75rem;
+            text-align: center;
+            color: #f55555;
+            @media (max-width: 700px) {
+                font-size: 1rem;
+            }
+        }
+        .blog-post-content {
+            color: whitesmoke;
+            font-size: 1rem;
+            padding: 5%;
+            @media (max-width: 700px) {
+                font-size: .9rem;
+            }
+        }
+    }
 }
