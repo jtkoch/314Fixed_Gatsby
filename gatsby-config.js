@@ -7,6 +7,7 @@ module.exports = {
     author: `@JensenKoch`,
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-stripe`,
     {
