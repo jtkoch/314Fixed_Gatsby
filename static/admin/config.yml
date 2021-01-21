@@ -1,17 +1,17 @@
 backend:
-  name: github
-  repo: jtkoch/314Fixed_Gatsby
+  name: git-gateway
   branch: main
 media_folder: static/assets
-public_folder: assets
+public_folder: /assets
+display_url: http://localhost:8000/
 collections:
   - name: blog
     label: Blog
     folder: blog
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      # - { name: image, label: Image, widget: image }
-      - { name: body, label: Body, widget: markdown }
+      - { name: Path, label: Path, default: blog/ }
+      - { name: Date, label: Date, widget: datetime }
+      - { name: Title, label: Title }
+      - { label: Image, name: image, widget: image, required: false }
+      - { name: Body, label: Body, widget: markdown }
