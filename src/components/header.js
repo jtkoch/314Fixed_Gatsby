@@ -13,7 +13,7 @@ const Header = () => (
         <Link to="/" ><img className="icon" src={icon} alt="logo" /></Link>
         <Navbar.Toggle className="border-0 navbar-dark" aria-controls="navbar-toggle" />
         <Navbar.Collapse id="navbar-collapse">
-            <Nav className="ml-auto" className="navbar-container">
+            <Nav className="ml-auto navbar-container">
                 <Link style={{color:"#ADBFEF"}} className="nav-link ml-4 mr-4" to="/">Home</Link>
                 <Link style={{color:"#ADBFEF"}} className="nav-link ml-4 mr-4" to="/blog">Blog</Link>
                 <Link style={{color:"#ADBFEF"}} className="nav-link ml-4 mr-4" to="/merch">Merch</Link>

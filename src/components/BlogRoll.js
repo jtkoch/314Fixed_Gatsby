@@ -39,6 +39,7 @@ class BlogRoll extends React.Component {
                     Keep Reading →
                   </Link>
                 </p>
+                {post.frontmatter.image}
               </article>
             </div>
           ))}

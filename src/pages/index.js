@@ -43,8 +43,8 @@ const IndexPage = () => (
             Check our instagram story for updates <br></br>
             on upcoming group rides
           </p>
-          <a href="https://www.instagram.com/314fixed/" target=" _blank" rel="noopener noreferrer" ><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a>
-          <a href="https://www.youtube.com/channel/UCy6wfAZwP54rcZ6ToFprHGA" target=" _blank" rel="noopener noreferrer" ><FontAwesomeIcon icon={faYoutube}></FontAwesomeIcon></a>
+          <a href="https://www.instagram.com/314fixed/" target=" _blank" rel="noopener noreferrer" ><FontAwesomeIcon icon={faInstagram} aria-label="instagram"></FontAwesomeIcon></a>
+          <a href="https://www.youtube.com/channel/UCy6wfAZwP54rcZ6ToFprHGA" target=" _blank" rel="noopener noreferrer" ><FontAwesomeIcon icon={faYoutube} aria-label="youtube"></FontAwesomeIcon></a>
         </div>
       </div>
 
