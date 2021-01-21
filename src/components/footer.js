@@ -6,7 +6,7 @@ function Footer() {
         <div className="footer-container">
             <ul>
                 <li><Link style={{color:"#ADBFEF"}} to="/">Home</Link></li>
-                <li><Link style={{color:"#ADBFEF"}} to="/Blog">Blog</Link></li>
+                <li><Link style={{color:"#ADBFEF"}} to="/blog">Blog</Link></li>
                 <li><Link style={{color:"#ADBFEF"}} to="/merch">Merch</Link></li>
                 <li><Link style={{color:"#ADBFEF"}} to="/contactPage">Contact</Link></li>
             </ul>

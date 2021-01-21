@@ -10,8 +10,8 @@ collections:
     folder: blog
     create: true
     fields:
-      - { name: Path, label: Path, default: blog/ }
-      - { name: Date, label: Date, widget: datetime }
-      - { name: Title, label: Title }
-      - { label: Image, name: image, widget: image, required: false }
-      - { name: Body, label: Body, widget: markdown }
+      - { name: path, label: Path, default: blog/ }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { label: image, name: image, widget: image, required: false }
+      - { name: body, label: Body, widget: markdown }
