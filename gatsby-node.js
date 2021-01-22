@@ -1,38 +1,81 @@
-const path = require(`path`);
+// const path = require(`path`);
 
-exports.createPages = async ({actions, graphql, reporter}) => {
-  const {createPage} = actions;
+// exports.createPages = async ({actions, graphql, reporter}) => {
+//   const {createPage} = actions;
 
-  const blogPostTemplate = path.resolve(`src/templates/blog.js`);
+//   const blogPostTemplate = path.resolve(`src/templates/blog.js`);
 
-  const result = await graphql(`
+//   const result = await graphql(`
+//     {
+//       allMarkdownRemark(
+//         sort: { order: DESC, fields: [frontmatter___date] }
+//         limit: 1000
+//       ) {
+//         edges {
+//           node {
+//             frontmatter {
+//               path
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `);
+
+//   // Handle errors
+//   if (result.errors) {
+//     reporter.panicOnBuild(`Error while running GraphQL query.`);
+//     return
+//   }
+
+//   result.data.allMarkdownRemark.edges.forEach(({node}) => {
+//     createPage({
+//       path: node.frontmatter.path,
+//       component: blogPostTemplate,
+//       context: {}, // additional data can be passed via context
+//     })
+//   })
+// };
+
+const { createFilePath } = require("gatsby-source-filesystem")
+const path = require(`path`)
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { data } = await getPageData(graphql)
+  data.blogPosts.edges.forEach(({ node }) => {
+    const { slug } = node.fields
+    actions.createPage({
+      path: `/blog${slug}`,
+      component: path.resolve("./src/components/templates/blog.js"),
+      context: { slug: slug },
+    })
+  })
+}
+
+async function getPageData(graphql) {
+  return await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      blogPosts: allMarkdownRemark {
         edges {
           node {
-            frontmatter {
-              path
+            fields {
+              slug
             }
           }
         }
       }
     }
-  `);
-
-  // Handle errors
-  if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`);
-    return
-  }
-
-  result.data.allMarkdownRemark.edges.forEach(({node}) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: blogPostTemplate,
-      context: {}, // additional data can be passed via context
-    })
-  })
-};
+  `)
+}

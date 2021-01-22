@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: jtkoch/314Fixed_Gatsby
   branch: main
 media_folder: static/assets
 public_folder: assets
