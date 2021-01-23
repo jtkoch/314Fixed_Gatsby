@@ -1,5 +1,5 @@
 import React from 'react'
-import Blog from "../templates/blog"
+import BlogPost from "../templates/BlogPost"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -13,7 +13,7 @@ export default class BlogIndexPage extends React.Component {
                 <h1 className="blog-title">Latest Posts</h1>
                 <section>
                     <div className="content">
-                        <Blog />
+                        <BlogPost />
                     </div>
                 </section>
             </div>
