@@ -19,7 +19,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const { slug } = node.fields
     actions.createPage({
       path: `/blog${slug}`,
-      component: path.resolve("./src/templates/BlogPost.js"),
+      component: path.resolve("./src/pages/blog.js"),
       context: { slug: slug },
     })
   })
