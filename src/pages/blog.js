@@ -1,48 +1,24 @@
 import React from 'react'
-import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BlogRoll from '../components/BlogRoll'
 
-import Img from "gatsby-image"
-
-const blog = ({ data }) => {
-  console.log("data,", data)
+export default class BlogIndexPage extends React.Component {
+  render() {
     return (
       <React.Fragment>
         <Layout>
-            <SEO title="Blog" />
-            <div className="blog-page-container">
-                <h1 className="blog-title">Latest Posts</h1>
-                <div>
-                  <h2>{data.markdownRemark.frontmatter.title}</h2>
-                  <Img
-                    fixed={data.markdownRemark.frontmatter.image.childImageSharp.fixed}
-                  />
-                </div>
-            </div>
+        <SEO title="Blog" />
+          <div className="blog-page-container">
+            <h1 className="blog-title">Latest Posts</h1>
+            <section>
+              <div className="content">
+                <BlogRoll />
+              </div>
+            </section>
+          </div>
         </Layout>
       </React.Fragment>
     )
-}
-
-export default blog
-
-export const BlogPostTemplateQuery = graphql`
-  query BlogPostTemplateQuery($slug: String) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        image {
-          childImageSharp {
-            fixed(width: 200) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    }
   }
-`
+}
