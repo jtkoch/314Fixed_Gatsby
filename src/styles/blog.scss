@@ -88,24 +88,16 @@
             padding-top: 30%;
             width: 90%;
         }
-
-        h1 {
-            font-size: 3rem;
-            text-align: center;
-            background-image: linear-gradient(to right,#f55555, #adbfef, #c35fde);
-            color: transparent;
-            background-clip: text;
-            @media (max-width: 700px) {
-                font-size: 2rem;
-            }
-        }
-        h2 {
+        .blog-post-title {
             font-size: 1.75rem;
             text-align: center;
             color: #f55555;
             @media (max-width: 700px) {
                 font-size: 1rem;
             }
+        }
+        .blog-post-image {
+            
         }
         .blog-post-content {
             color: whitesmoke;

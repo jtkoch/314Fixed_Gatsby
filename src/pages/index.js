@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from '../components/contact'
+import BlogRoll from '../components/BlogRoll'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons"
@@ -31,6 +32,11 @@ const IndexPage = () => (
           fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
           sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
+      </div>
+
+      <div className="blog-section">
+        <h1>Blog Posts</h1>
+        <BlogRoll />
       </div>
 
       <div className="bottom">
