@@ -4,6 +4,7 @@ backend:
   branch: main
 media_folder: static/assets
 public_folder: assets
+display_url: https://314fixed.netlify.app/
 collections:
   - name: blog
     label: Blog
