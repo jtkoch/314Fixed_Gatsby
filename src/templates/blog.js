@@ -13,15 +13,17 @@ const blog = ({ data }) => {
             <Layout>
                 <SEO title="Blog" />
                 <div className="blog-post-container">
-                  <Link className="button" to="/blog">← Back</Link>
                         <div className="blog-post">
                             <h2 className="blog-post-title">{frontmatter.title}</h2>
-                            <Img className="blog-post-image" fixed={frontmatter.image.childImageSharp.fixed} />
+                            <div className="blog-post-image">
+                              <Img  fixed={frontmatter.image.childImageSharp.fixed} />
+                            </div>
                             <div
                                 className="blog-post-content"
                                 dangerouslySetInnerHTML={{ __html: html }}
                             />
                         </div>
+                      <Link className="button" to="/blog">← Back</Link>
                 </div>
             </Layout>
         </React.Fragment>
