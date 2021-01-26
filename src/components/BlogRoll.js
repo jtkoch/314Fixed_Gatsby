@@ -17,7 +17,7 @@ class BlogRoll extends React.Component {
                   <Link className="post-title" to={post.frontmatter.path}>{post.frontmatter.title}</Link>
                   <p>{post.frontmatter.date}</p>
                   <div className="thumbnail" >
-                    <Img fixed={post.frontmatter.image.childImageSharp.fixed} />
+                    <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
                   </div>
                   <p className="excerpt">{post.excerpt}</p>
                   <Link className="button" to={post.frontmatter.path}>Keep Reading →</Link>
@@ -54,8 +54,8 @@ export default () => (
                 date(formatString: "MMMM DD, YYYY")
                 image {
                     childImageSharp {
-                      fixed(width: 200) {
-                        ...GatsbyImageSharpFixed
+                      fluid(maxWidth: 600) {
+                        ...GatsbyImageSharpFluid
                       }
                     }
                 }
