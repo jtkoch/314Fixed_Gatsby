@@ -13,6 +13,7 @@ const blog = ({ data }) => {
             <Layout>
                 <SEO title="Blog" />
                 <div className="blog-post-container">
+                  <Link className="button" to="/blog">← Back</Link>
                         <div className="blog-post">
                             <h2 className="blog-post-title">{frontmatter.title}</h2>
                             <Img className="blog-post-image" fixed={frontmatter.image.childImageSharp.fixed} />
@@ -20,7 +21,6 @@ const blog = ({ data }) => {
                                 className="blog-post-content"
                                 dangerouslySetInnerHTML={{ __html: html }}
                             />
-                            <Link className="button" to="/blog">← Back</Link>
                         </div>
                 </div>
             </Layout>

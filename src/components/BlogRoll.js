@@ -12,24 +12,16 @@ class BlogRoll extends React.Component {
       <div>
         {posts &&
           posts.map(({ node: post }) => (
-            <div key={post.id}>
-                <h3>
-                    <p>
-                    <Link to={post.frontmatter.path}>
-                        {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span>{post.frontmatter.date}</span>
-                    </p>
-                </h3>
-                    <Img className="thumbnail" fixed={post.frontmatter.image.childImageSharp.fixed} />
-                    <p>
-                        {post.excerpt}
-                        <br />
-                        <Link className="button" to={post.frontmatter.path}>
-                        Keep Reading →
-                        </Link>
-                    </p>
+            <div key={post.id} className="cards" >
+                <div className="card">
+                  <Link className="post-title" to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+                  <p>{post.frontmatter.date}</p>
+                  <div className="thumbnail" >
+                    <Img fixed={post.frontmatter.image.childImageSharp.fixed} />
+                  </div>
+                  <p className="excerpt">{post.excerpt}</p>
+                  <Link className="button" to={post.frontmatter.path}>Keep Reading →</Link>
+              </div>
             </div>
           ))}
       </div>
@@ -54,7 +46,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 60)
               id
               frontmatter {
                 path
