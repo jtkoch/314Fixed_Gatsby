@@ -53,11 +53,11 @@ export default () => (
                 title
                 date(formatString: "MMMM DD, YYYY")
                 image {
-                    childImageSharp {
-                      fluid(maxWidth: 600) {
-                        ...GatsbyImageSharpFluid
-                      }
+                  childImageSharp {
+                    fluid(maxWidth: 600) {
+                      ...GatsbyImageSharpFluid
                     }
+                  }
                 }
               }
             }
