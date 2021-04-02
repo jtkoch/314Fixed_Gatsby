@@ -20,7 +20,7 @@ class BlogRoll extends React.Component {
                     <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
                   </div>
                   <p className="excerpt">{post.excerpt}</p>
-                  <Link className="button" to={post.frontmatter.path}>Keep Reading →</Link>
+                  <Link className="keep-reading" to={post.frontmatter.path}>Keep Reading →</Link>
               </div>
             </div>
           ))}

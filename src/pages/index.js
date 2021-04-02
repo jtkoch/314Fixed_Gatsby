@@ -15,11 +15,17 @@ const IndexPage = () => (
     <div className="home-container">
       <div className="hero-section">
         <img className="logo" src={logo} alt="" />
-        <p>
-          We put together group rides in Saint Louis for anyone that
-          loves to ride fixed gear bikes. Come hang!
-        </p>
-        <a href="/contactPage" className="button">Contact Us</a>
+
+        <section class="button">
+          <a href="#contact">
+            <span class="text">Contact Us</span>
+            <span class="line -right"></span>
+            <span class="line -top"></span>
+            <span class="line -left"></span>
+            <span class="line -bottom"></span>
+          </a>
+        </section>
+
       </div>
 
       <div className="mid">
@@ -39,8 +45,8 @@ const IndexPage = () => (
         <BlogRoll />
       </div>
 
-      <div className="bottom">
-        <div className="contact">
+      <div id="contact" className="bottom">
+        <div  className="contact">
           <Contact />
         </div>
         <div className="social">
